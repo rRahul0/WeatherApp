@@ -1,0 +1,277 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --colorDark1: #112D4E;
+    --colorDark2: #3F72AF;
+    --colorLight1: #dbe2efb4;
+    --colorLight2: #ffffff;
+}
+
+#wrapper {
+    width: 100vw;
+    height: 100vh;
+    color: var(--colorLight2);
+    background-image: linear-gradient(160deg, #112d4e 0%, #3f72af 100%);
+    overflow-x: hidden;
+
+}
+
+.container {
+    width: 90%;
+    max-width: 550px;
+    margin: 2rem auto;
+
+}
+
+#heading {
+    text-align: center;
+}
+
+
+#tab {
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin: 3rem;
+    cursor: pointer;
+    color: var(--colorLight2);
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.your-weather-tab.active {
+    background-color: var(--colorLight1);
+    padding: 0.1rem 0.2rem;
+    border-radius: 0.15rem;
+}
+
+.search-weather-tab.active {
+    background-color: var(--colorLight1);
+    padding: 0.1rem 0.2rem;
+    border-radius: 0.15rem;
+}
+
+
+.grant-loc {
+    margin-top: 7rem;
+    font-size: 1.3rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+
+    display: none;
+}
+
+.grant-loc.active {
+    display: flex;
+}
+
+.grant-loc img {
+    height: 120px;
+    width: 120px;
+}
+
+.grant-loc button {
+    all: unset;
+    cursor: pointer;
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
+    border-radius: 0.4rem;
+    text-transform: uppercase;
+    background-color: var(--colorDark2);
+}
+
+
+.content-box {
+    width: 100%;
+}
+
+.search-city {
+    width: 82%;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    display: none;
+}
+
+.search-city.active {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.search-city-input {
+    width: 90%;
+    padding: 0rem 1.5rem;
+    font-size: 1.2rem;
+    border-radius: 1.5rem;
+    background-color: var(--colorLight1);
+    outline: none;
+    border: none;
+    
+}
+
+.search-city-btn {
+    all: unset;
+    padding: 0rem 0.2rem;
+
+    background-color: var(--colorDark2);
+    border-radius: 49%;
+    cursor: pointer;
+}
+
+.search-city-img {
+    width: 35px;
+    padding: 0.5rem;
+}
+
+
+.loading-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    display: none;
+}
+
+.loading-screen img {
+    width: 12rem;
+    height: 12rem;
+}
+
+.loading-screen p {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.loading-screen.active {
+    display: flex;
+}
+
+
+.user-info-container {
+    margin-top: 4rem;
+    color: var(--colorLight2);
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
+    display: none;
+}
+
+.user-info-container.active {
+    display: flex;
+}
+
+
+.not-found {
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+    display: none;
+}
+
+.not-found img {
+    height: 200px;
+    width: 200px;
+}
+
+.not-found.active {
+    display: flex;
+}
+
+.city {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--colorLight2);
+}
+
+.city-text {
+    font-size: 2.5rem;
+    text-transform:  capitalize;
+}
+.weather {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.5rem;
+    text-transform:  capitalize;
+}
+
+.temp {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.card-container {
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+}
+
+.card-item {
+    width: 8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--colorLight1);
+    border-radius: 0.2rem;
+    padding: 0.5rem 0.5rem;
+
+}
+
+.card-item-img {
+    height: 70px;
+    width: 95px;
+}
+
+.card-text {
+    font-size: 1.2rem;
+}
+
+.card-val {
+    font-size: 1.5rem;
+}
+
+
+
+
+@media (max-width:500px) {
+    .container {
+        width: 96%;
+    }
+
+    #tab {
+        margin: 3rem 0.5rem;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .grant-loc {
+        text-align: center;
+        margin: 0rem 1rem;
+    }
+
+    .search-city {
+        width: 93%;
+    }
+    
+    .not-found img {
+        height: 150px;
+        width: 150px;
+    }
+}

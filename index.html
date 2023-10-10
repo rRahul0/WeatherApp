@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div id="wrapper">
+        <div class="container">
+            <h1 id="heading">WEATHER APP</h1>
+
+            <div id="tab">
+                <p class="your-weather-tab">Your Weather</p>
+                <p class="search-weather-tab">Search Weather</p>
+            </div>
+
+            <div>
+                
+                <div class="grant-loc">
+                    <img src="./static/location.png" alt="">
+                    <p>Grant Location Access</p>
+                    <p>Allow Access To Get Weather Information</p>
+                    <button class="access-btn">Grant Access</button>
+                </div>
+
+                <div class="content-box">
+                
+                    <form class="search-city">
+                        <input type="text" placeholder="Search For City..." class="search-city-input">
+                        <button class="search-city-btn" type="submit">
+                            <img src="./static/search.png" alt="" class="search-city-img">
+                        </button>
+                    </form  >
+
+                    <div class="loading-screen">
+                        <img src="./static/loading.gif" alt="">
+                        <p>LOADING</p>
+                    </div>
+
+                    <div class="not-found">
+                        <img src="./static/not-found.png" alt="">
+                    </div>
+
+                    <div class="user-info-container">
+                        <div class="city">
+                            <p city-name class="city-text"></p>
+                            <img src="" alt="" country-icon width="28px" height="22px">
+                        </div>
+
+                        <div class="weather">
+                            <p weather-desc></p>
+                            <img src="" alt="" weather-icon height="80px" width="80px">
+                            <p temp class="temp"></p>
+                        </div>
+
+                        <div class="card-container">
+                            <div class="card-item">
+                                <img src="./static/wind.png" alt="" class="card-item-img">
+                                <p class="card-text">WINDSPEED</p>
+                                <p wind-val class="card-val"></p>
+                            </div>
+
+                            <div class="card-item">
+                                <img src="./static/humidity.png" alt="" class="card-item-img">
+                                <p class="card-text">HUMIDITY</p>
+                                <p humidity-val class="card-val"></p>
+                            </div>
+
+                            <div class="card-item">
+                                <img src="./static/cloud.png" alt="" class="card-item-img">
+                                <p class="card-text">CLOUDS</p>
+                                <p cloud-val class="card-val"></p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
